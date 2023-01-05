@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <title>ระบบลงทะเบียนเรียน</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #fe965a;">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#">ระบบลงทะเบียนเรียน</a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="navbar-brand text-light" href="#"></a>
+                        <a class="navbar-brand text-light" href="#">ลงทะเบียนเรียน</a>
+                        <a class="navbar-brand text-light" href="#">เพิ่มถอนรายวิชา</a>
+                        <a class="navbar-brand text-light" href="#">ตารางเรียน</a>
+                        <a class="navbar-brand text-light" href="#">ผลการเรียน</a>
+                        <a class="navbar-brand text-light" href="#">หลักสูตร</a>
+                        <a class="navbar-brand text-light" href="#">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center py-5"  style="color: #fe965a;">เพิ่ม-ถอนรายวิชา</h2>
+
+        <div style="color:grey;" >
+            <span class="fw-bold">รายวิชาที่เลือกอยู่ปัจจุบัน</span>
+        </div>
+       
+
+        <div class="bd-example">
+            <table class="table table-bordered text-center">
+                <thead>
+              <tr class="text-white" style="background-color: #fe965a;">
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">ชื่อวิชา</th>
+                <th scope="col">หน่วยกิต</th>
+                <th scope="col">กลุ่ม</th>
+                <th scope="col">วัน/เวลา</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-gray">002</th>
+                <td scope="row" class="text-gray">ภาษาอังกฤษ</td>
+                <td scope="row" class="text-gray">3</td>
+                <td scope="row">
+                <span class="dropdown" background-color: #fe965a; >
+                    <button  type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                     กลุ่ม
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">1</a></li>
+                      <li><a class="dropdown-item" href="#">2</a></li>
+                    </ul>
+                  </span></td>
+                <td scope="row" class="text-gray">wed:8.00-10.00</td>
+                <td scope="row" class="text-gray">sc2-214</td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">ถอน</a></td>
+              </tr>
+              <tr class="text" style="background-color: #ffd3ba;">
+                <th scope="col"></th>
+                <th scope="col">จำนวนหน่วยกิตรวม</th>
+                <th scope="col">3</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+              
+            </tbody>
+          
+            </table>
+          </div>
+          <div style="color:#fe965a;" >
+            <span class="fw-bold">เลือกวิชาที่ต้องการลงทะเบียน</span>
+            <input type="text" id="validationServer01" placeholder="ป้อนรหัสวิชา/ชื่อวิชา" name="subject"  size="20">
+            <button type="button" class="btn btn-outline-warning">ค้นหา</button>
+        </div>
+       
+
+        <div class="bd-example">
+            <table class="table table-bordered text-center">
+                <thead>
+              <tr class="text-white" style="background-color: #fe965a;">
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">ชื่อวิชา</th>
+                <th scope="col">หน่วยกิต</th>
+                <th scope="col">กลุ่ม</th>
+                <th scope="col">รับ/เหลือ</th>
+                <th scope="col">วัน/เวลา</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-gray">001</th>
+                <td scope="row" class="text-gray">คณิตศาสตร์</td>
+                <td scope="row" class="text-gray">3</td>
+                <td scope="row" class="text-gray">1</td>
+                <td scope="row" class="text-gray">40/39</td>
+                <td scope="row" class="text-gray">mon:10.00-11.00</td>
+                <td scope="row" class="text-gray">sc2-207</td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">เลือก</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-gray">002</th>
+                <td scope="row" class="text-gray">คณิตศาสตร์</td>
+                <td scope="row" class="text-gray">3</td>
+                <td scope="row" class="text-gray">2</td>
+                <td scope="row" class="text-gray">40/20</td>
+                <td scope="row" class="text-gray">tue:8.00-9.00</td>
+                <td scope="row" class="text-gray">sc2-207</td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">เลือก</a></td>
+              </tr>
+              <tr class="text" style="background-color: #ffd3ba;">
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </tbody>
+          
+            </table>
+          </div>
+
+        
+    </div>
+
+
+
+</body>
+
+</html>
