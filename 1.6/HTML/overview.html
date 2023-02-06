@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <title>ระบบลงทะเบียนเรียน</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #fe965a;">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#">ระบบลงทะเบียนเรียน</a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="navbar-brand text-light" href="#"></a>
+                        <a class="navbar-brand text-light" href="#">ภาพรวมข้อมูล</a>
+                        <a class="navbar-brand text-light" href="#">กำหนดตารางสอนอาจารย์</a>
+                        <a class="navbar-brand text-light" href="#">กำหนดตารางเรียนของนิสิต</a>
+                        <a class="navbar-brand text-light" href="#">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center py-5"  style="color: #fe965a;">ภาพรวมข้อมูล</h2>
+
+        <div style="color:#fe965a;" >
+            <span class="fw-bold">ข้อมูลนิสิต</span>
+            <input type="text" id="validationServer01" placeholder="ป้อนรหัสนิสิต/ชื่อนิสิต/คณะ/สาขา" name="name"  size="30">
+            <button type="button" class="btn btn-outline-warning">ค้นหา</button>
+        </div>
+       
+
+        <div class="bd-example">
+            <table class="table table-bordered text-center">
+                <thead>
+              <tr class="text-white" style="background-color: #fe965a;">
+                <th scope="col">รหัสนิสิต</th>
+                <th scope="col">ชื่อ-นามสกุล</th>
+                <th scope="col">ชั้นปี</th>
+                <th scope="col">คณะ</th>
+                <th scope="col">สาขา</th>
+                <th scope="col"></th>
+                <th scope="col"><a class="text-light" href="#">เพิ่ม+</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-gray">63300001</th>
+                <td scope="row" class="text-gray">สมมติ นามแฝง</td>
+                <td scope="row" class="text-gray">3</td>
+                <td scope="row" class="text-gray">วิทยาศาสตร์</td>
+                <td scope="row" class="text-gray">วิทยาการคอมพิวเตอร์</td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">แก้ไข</a></td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">ลบ</a></td>
+              </tr>
+            </tbody>
+          
+            </table>
+          </div>
+          <div style="color:#fe965a;" >
+            <span class="fw-bold">ข้อมูลรายวิชา</span>
+            <input type="text" id="validationServer01" placeholder="ป้อนรหัสวิชา/ชื่อวิชา" name="subject"  size="20">
+            <button type="button" class="btn btn-outline-warning">ค้นหา</button>
+        </div>
+       
+
+        <div class="bd-example">
+            <table class="table table-bordered text-center">
+                <thead>
+              <tr class="text-white" style="background-color: #fe965a;">
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">ชื่อวิชา</th>
+                <th scope="col">หน่วยกิต</th>
+                <th scope="col"></th>
+                <th scope="col"><a class="text-light" href="#">เพิ่ม+</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-gray">001</th>
+                <td scope="row" class="text-gray">คณิตศาสตร์</td>
+                <td scope="row" class="text-gray">3</td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">แก้ไข</a></td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">ลบ</a></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-gray">002</th>
+                <td scope="row" class="text-gray">ภาษาอังกฤษ</td>
+                <td scope="row" class="text-gray">3</td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">แก้ไข</a></td>
+                <td scope="row"><a class="text-gray" style="color: #fe965a;" href="#">ลบ</a></td>
+              </tr>
+            </tbody>
+          
+            </table>
+          </div>
+
+          <div style="color:#fe965a;" >
+            <span class="fw-bold">ข้อมูลอาจารย์</span>
+            <input type="text" id="validationServer01" placeholder="ป้อนรหัสอาจารย์/ชื่ออาจารย์" name="teacher"  size="30">
+            <button type="button" class="btn btn-outline-warning">ค้นหา</button>
+        </div>
+       
+
+        <div class="bd-example">
+            <table class="table table-bordered text-center">
+                <thead>
+              <tr class="text-white" style="background-color: #fe965a;">
+                <th scope="col">รหัสอาจารย์</th>
+                <th scope="col">ชื่อ-นามสกุล</th>
+                <th scope="col">รหัสวิชา</th>
+                <th scope="col">วิชาที่สอน</th>
+                <th scope="col"></th>
+                <th scope="col"><a class="text-light" href="#">เพิ่ม+</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-gray">273468</th>
+                <td scope="row" class="text-gray">อัยยา อิงฤทธิ์</td>
+                <td scope="row" class="text-gray">002</td>
+                <td scope="row" class="text-gray">ภาษาอังกฤษ</td>
+                <td scope="row" ><a class="text-gray" style="color: #fe965a;" href="#">แก้ไข</a></td>
+                <td scope="row" ><a class="text-gray" style="color: #fe965a;" href="#">ลบ</a></td>
+              </tr>
+            </tbody>
+          
+            </table>
+          </div>
+
+        
+    </div>
+
+
+
+</body>
+
+</html>

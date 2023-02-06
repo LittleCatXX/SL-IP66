@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>ตารางเรียน</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #fe965a;">
+      <div class="container">
+        <a class="navbar-brand text-light" href="index.html">ระบบลงทะเบียนเรียน</a>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item ">
+            <a class="nav-link text-light" href="login-page.php">สถิติในมหาวิทยาลัย</a>
+            </li>
+          <li class="nav-item ">
+          <a class="nav-link text-light" href="login-page.php">ออกจากระบบ</a>
+          </li>
+      </ul>
+      </div>
+    </nav>
+  </div>
+  <br><br><br><br><br>
+  <div class="container" style="font-size: 18px;">
+  <div class="row">
+    <div class="col-sm-8" style="color: #fe965a;">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สรุปสถิติ
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        
+        <button type="button" class="btn btn-primary"style="background-color: #fe965a; border-color: #fe965a;">จำนวนนิสิต</button>
+      
+        <div class="btn-group" role="group" >
+          <button id="btnGroupDrop1" type="button" style="background-color: #fe965a; border-color: #fe965a;" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          </button>
+          <ul class="dropdown-menu"style="background-color: #fe965a; border-color: #fe965a;" aria-labelledby="btnGroupDrop1">
+            <li><a class="dropdown-item" href="#">การจ่ายค่าเทอม</a></li>
+            <li><a class="dropdown-item" href="#">ผลการเรียนของนิสิต</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ["Element", "Density", { role: "style" } ],
+            ["ชาย",  1500, "silver"],
+            ["หญิง", 800, "silver"],
+          ]);
+
+          var view = new google.visualization.DataView(data);
+          view.setColumns([0, 1,
+                          { calc: "stringify",
+                            sourceColumn: 1,
+                            type: "string",
+                            role: "annotation" },
+                          2]);
+
+          var options = {
+            title:"",
+            width: 600,
+            height: 400,
+            bar: {groupWidth: "60%"},
+            legend: { position: "none" },
+          };
+          var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+          chart.draw(view, options);
+      }
+      </script>
+      <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+    </div>
+    <div class="col-sm-4" style="border: 1px solid #fe965a;">
+      <div style="color: #fe965a;">ตัวกรองสถิติ</div>
+
+      <div class="btn ml" style="color: #fe965a;">
+        คณะ :
+        <div class="btn ms-6">
+        <button type="button" class="btn btn-outline-warning">วิทยาศาสตร์</button>
+        <button type="button" class="btn btn-outline-warning">วิศวกรรมศาสตร์</button>
+        </div>
+        <div class="btn ms-6">
+          <button type="button" class="btn btn-outline-warning">สังคมศาสตร์</button>
+          <button type="button" class="btn btn-outline-warning">ศึกษาศาสตร์</button>
+        </div>
+      </div>
+
+      <div class="btn ml" style="color: #fe965a;">
+        สาขา :
+        <div class="btn ms-6">
+        <button type="button" class="btn btn-outline-warning">เทคโนโลยีสารสนเทศ</button>
+        <button type="button" class="btn btn-outline-warning">ชีวิวิทยา</button>
+        </div>
+        <div class="btn ms-6">
+          <button type="button" class="btn btn-outline-warning">วิทยาการคอมพิวเตอร์</button>
+          <button type="button" class="btn btn-outline-warning">ฟิสิกส์</button>
+        </div>
+      </div>
+
+      <div class="btn ml">
+        <p class="btn ms" style="color: #fe965a;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ชั้นปี :</p>
+        <div class="btn ms-6">
+        <button type="button" class="btn btn-outline-warning btn-sm" >1</button>
+        <button type="button" class="btn btn-outline-warning btn-sm ms-3" >2</button>    
+          <button type="button" class="btn btn-outline-warning btn-sm ms-3" >3</button>
+          <button type="button" class="btn btn-outline-warning btn-sm ms-3" >4</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
