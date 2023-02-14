@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <title>ระบบลงทะเบียนเรียน</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #fe965a;">
+        <div class="container">
+            <a class="navbar-brand text-light" href="#">ระบบลงทะเบียนเรียน</a>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="navbar-brand text-light" href="#">ตารางสอน</a>
+                        <a class="navbar-brand text-light" href="#">ข้อมูลรายวิชาที่สอน</a>
+                        <a class="navbar-brand text-light" href="#">กรอกคะแนน</a>
+                        <a class="navbar-brand text-light" href="#">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-left py-5"  style="color: #fe965a;">กรอกคะแนนนิสิต</h2>
+
+        <div style="color:grey;" >
+            <span class="fw-bold">รายวิชา</span> &emsp;&emsp; <span>002 ภาษาอังกฤษ</span><br>
+            <span class="fw-bold">กลุ่ม</span> &emsp;&nbsp;&emsp;&nbsp;&emsp; <span>1</span><br>
+            <span class="fw-bold">ปีการศึกษา</span> &nbsp; <span>2/2565</span><br><br>
+            <button type="button" class="btn btn-success">บันทึกข้อมูล</button>
+        </div>
+       
+
+        <div class="bd-example">
+            <table class="table table-bordered text-center">
+                <thead>
+              <tr class="text-white" style="background-color: #fe965a;">
+                <th scope="col">ลำดับ</th>
+                <th scope="col">รหัสนิสิต</th>
+                <th scope="col">ชื่อ-นามสกุล</th>
+                <th scope="col">คณะ</th>
+                <th scope="col">สาขา</th>
+                <th scope="col">คะแนน</th>
+                <th scope="col">เกรด</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-gray">1</th>
+                <td scope="row" class="text-gray">63300001</td>
+                <td scope="row" class="text-gray">สมมติ นามแฝง</td>
+                <td scope="row" class="text-gray">วิทยาศาสตร์</td>
+                <td scope="row" class="text-gray">วิทยาการคอมพิวเตอร์</td>
+                <td><input type="text" class="form-control " id="validationServer01" name="score"  size="2"required></td>
+                <td scope="row" class="text-gray">A</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-gray">2</th>
+                <td scope="row" class="text-gray">63300002</td>
+                <td scope="row" class="text-gray">[ชื่อนิสิตคนที่ 2]</td>
+                <td scope="row" class="text-gray">วิทยาศาสตร์</td>
+                <td scope="row" class="text-gray">วิทยาการคอมพิวเตอร์</td>
+                <td><input type="text" class="form-control " id="validationServer01" name="score"  size="2"required></td>
+                <td scope="row" class="text-gray"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-gray">3</th>
+                <td scope="row" class="text-gray">63300003</td>
+                <td scope="row" class="text-gray">[ชื่อนิสิตคนที่ 3]</td>
+                <td scope="row" class="text-gray">วิทยาศาสตร์</td>
+                <td scope="row" class="text-gray">วิทยาการคอมพิวเตอร์</td>
+                <td><input type="text" class="form-control " id="validationServer01" name="score"  size="2"required></td>
+                <td scope="row" class="text-gray"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-gray">4</th>
+                <td scope="row" class="text-gray">63300002</td>
+                <td scope="row" class="text-gray">[ชื่อนิสิตคนที่ 4]</td>
+                <td scope="row" class="text-gray">วิทยาศาสตร์</td>
+                <td scope="row" class="text-gray">วิทยาการคอมพิวเตอร์</td>
+                <td><input type="text" class="form-control " id="validationServer01" name="score"  size="2"required></td>
+                <td scope="row" class="text-gray"></td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-gray">5</th>
+                <td scope="row" class="text-gray">63300002</td>
+                <td scope="row" class="text-gray">[ชื่อนิสิตคนที่ 5]</td>
+                <td scope="row" class="text-gray">วิทยาศาสตร์</td>
+                <td scope="row" class="text-gray">วิทยาการคอมพิวเตอร์</td>
+                <td><input type="text" class="form-control " id="validationServer01" name="score"  size="2"required></td>
+                <td scope="row" class="text-gray"></td>
+              </tr>
+            </tbody>
+          
+            </table>
+          </div>
+
+        
+    </div>
+
+
+
+</body>
+
+</html>
